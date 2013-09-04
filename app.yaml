@@ -1,0 +1,49 @@
+application: bluejay-beats
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+  
+- url: /images
+  static_dir: images
+
+- url: /images/articles
+  static_dir: images/articles
+
+- url: /images/fancybox
+  static_dir: images/fancybox
+  
+- url: /images/pages
+  static_dir: images/pages
+  
+- url: /images/portfolio
+  static_dir: images/portfolio
+  
+- url: /css
+  static_dir: css
+  
+- url: /js
+  static_dir: js
+  
+- url: /scripts
+  static_dir: scripts
+  
+- url: /Light
+  static_dir: Light
+
+- url: /full
+  static_dir: full
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest
